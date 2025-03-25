@@ -19,11 +19,33 @@ nav ul li a:hover {
 }
 .paginas {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 .b-denuncie {
   background: #80005d;
   color: white;
-  padding: 6px 12px;
+  padding: 6px 16px;
   border-radius: 22px;
+}
+.dropdown-menu {
+  position: absolute;
+  box-shadow: 0 4 8px black;
+  background-color: #eddae7;
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: none;
+}
+.dropdown {
+  cursor: pointer;
+}
+.dropdown-menu a {
+  display: block;
+  max-width: 100%;
+  margin: 8px 2px;
+}
+.dropdown-menu a:hover {
+  color: #80005d;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }

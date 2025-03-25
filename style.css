@@ -1,5 +1,6 @@
 @import url(styles/header.css);
 @import url(styles/footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 *,
 *:after,
@@ -9,13 +10,16 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  color: white;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 img {
   max-width: 100%;
 }
 body {
-  font-size: 100%;
   list-style-type: none;
   max-width: 100%;
   margin: 0 auto;
