@@ -1,0 +1,50 @@
+main {
+  background: #0b070d;
+  background: url(/imgs/backgrounds/backheader.png) no-repeat;
+  background-size: cover;
+  padding: 2px;
+}
+.background-glass {
+  background: #0b070d99;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.h1 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5rem;
+  text-shadow: 0 4px 4px black;
+}
+.texto {
+  color: white;
+  padding: 20px;
+  line-height: 1;
+  font-size: 0.75rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  text-shadow: 0 2px 2px black;
+}
+@media (min-width: 768px) {
+  main {
+      padding: 3rem;
+    }
+  
+    .background-glass {
+      max-width: 700px;
+    }
+  
+    .h1 {
+      font-size: 2rem;
+      padding: 1rem;
+      margin-top: 6rem;
+    }
+  
+    .texto {
+      padding: 2rem;
+      line-height: 1.25;
+      font-size: 1rem;
+      margin-bottom: 7rem;
+    }
+}

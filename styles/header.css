@@ -5,6 +5,8 @@ header {
 }
 header nav {
   display: flex;
+  position: relative;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -13,6 +15,12 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #80005d;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 .creas {
   max-width: 10em;
@@ -35,6 +43,16 @@ nav ul li a:hover {
   border-radius: 10px;
   display: none;
 }
+.dropdown-menu::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #eddae7;
+  position: absolute;
+  top: -6px;
+  left: 60px;
+  rotate: 45deg;
+}
 .dropdown {
   cursor: pointer;
 }
@@ -48,4 +66,87 @@ nav ul li a:hover {
 }
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+.menu-burguer {
+  display: none;
+}
+/* From Uiverse.io by vinodjangid07 */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.3s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: #80005d;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+#checkbox:checked + .toggle .bars {
+  margin-left: 13px;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: rotate(135deg);
+  margin-left: 0;
+  transform-origin: center;
+  transition-duration: 0.3s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  transform: rotate(45deg);
+  transition-duration: 0.3s;
+  transform-origin: left center;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+  transform-origin: left center;
+}
+
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+  .menu-burguer {
+    display: block;
+  }
+}
+
+/* menu mobile */
+.open {
+  position: absolute;
+  display: block;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 60px;
+  top: 10px;
+  right: -10px;
+  border-radius: 8px;
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 8px ;
+  place-items: center;
+}
+.open>.paginas {
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 60px;
+}
+.open>.dropdown-menu {
+  max-width: 180px;
 }
