@@ -8,6 +8,7 @@ main {
   background: #0b070d99;
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 8px;
 }
 .h1 {
   color: white;
@@ -28,23 +29,23 @@ main {
 }
 @media (min-width: 768px) {
   main {
-      padding: 3rem;
-    }
-  
-    .background-glass {
-      max-width: 700px;
-    }
-  
-    .h1 {
-      font-size: 2rem;
-      padding: 1rem;
-      margin-top: 6rem;
-    }
-  
-    .texto {
-      padding: 2rem;
-      line-height: 1.25;
-      font-size: 1rem;
-      margin-bottom: 7rem;
-    }
+    padding: 3rem;
+  }
+
+  .background-glass {
+    max-width: 700px;
+  }
+
+  .h1 {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 6rem;
+  }
+
+  .texto {
+    padding: 2rem;
+    line-height: 1.25;
+    font-size: 1rem;
+    margin-bottom: 7rem;
+  }
 }

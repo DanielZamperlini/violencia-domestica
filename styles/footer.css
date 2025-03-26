@@ -94,8 +94,4 @@ div .redes-sociais {
     display: flex;
     gap: 1rem;
   }
-
-  .img-footer {
-    flex-direction: row !important;
-  }
 }

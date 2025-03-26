@@ -1,6 +1,7 @@
 @import url(styles/header.css);
 @import url(styles/footer.css);
 @import url(styles/texto.css);
+@import url(styles/section.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 *,
@@ -22,6 +23,6 @@ img {
 }
 body {
   list-style-type: none;
-  max-width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
 }
