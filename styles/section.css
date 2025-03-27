@@ -148,13 +148,13 @@ h3 {
 /* section serviços */
 
 .paragrafo {
-  text-align: center;
   margin: 30px;
   font-size: 0.9rem;
   max-width: 100ch;
   text-align: center;
   margin: 0 auto;
   padding: 20px;
+  text-wrap: balance;
 }
 h4 {
   font-size: 1rem;
@@ -172,3 +172,30 @@ h4 {
   margin: 10px;
   background: #80005d25;
 }
+  /* sectio maria da penha */
+
+  .maria-penha h3 {
+    margin-bottom: 6px;
+  }
+    .maria-penha p {
+      padding-bottom: 0px;
+    }
+    footer {
+      margin-top: 20px;
+    }
+    .maria-penha h6 {
+      margin-top: 24px;
+    }
+    .maria-penha img{
+       margin-top: 20px;
+    }
+    .maria-penha {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .maria-penha p {
+          text-align: start;
+        }
+      }
