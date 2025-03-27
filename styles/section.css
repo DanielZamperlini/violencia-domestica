@@ -114,34 +114,11 @@ h3 {
   overflow-x: auto;
   margin: 20px;
 }
-.section-galeria .span-right {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  width: 40px;
-  height: 50px;
-  background: url(/imgs/setas/seta-left.png);
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
-.section-galeria .span-left {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  width: 40px;
-  height: 50px;
-  background: url(/imgs/setas/seta-left.png);
-  box-shadow: inherit 2px 0px black;
-  background-repeat: no-repeat;
-  rotate: 180deg;
-  border-radius: 50%;
-}
+
 @media (max-width: 768px) {
 .img-carrosel {
-    width: 120px;
-    height: 180px;
+    width: 100px;
+    height: 140px;
   }
 }
 
