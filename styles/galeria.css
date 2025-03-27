@@ -22,7 +22,13 @@ section {
   align-items: center;
 }
 .fotos-galeria img {
-  width: 100px;
-  height: 140px;
+  width: 120px;
+  height: 160px;
   object-fit: cover;
+}
+@media (min-width: 768px) {
+  .fotos-galeria img {
+    width: 200px;
+    height: 280px;
+  }
 }
