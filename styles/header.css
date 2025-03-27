@@ -15,10 +15,20 @@ nav ul li a {
   padding: 4px;
 }
 @media (max-width: 768px) {
-nav ul li {
-  margin: 18px;
-  padding: 12px;
-}
+  nav ul li {
+    margin: 8px;
+    padding: 8px;
+    position: relative;
+  }
+  nav ul li::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100px;
+    background: #000;
+    position: absolute;
+    top: 50px;
+  }
 }
 
 nav ul li a:hover {
@@ -44,15 +54,13 @@ nav ul li a:hover {
   border-radius: 22px;
   display: inline-block;
   box-shadow: 0px 0px 1px black;
-    text-shadow: 0px 0px 1px black;
+  text-shadow: 0px 0px 1px black;
 }
 .b-denuncie:hover {
   box-shadow: 0px 0px 3px black;
-    text-shadow: 0 0px 3px black;
+  text-shadow: 0 0px 3px black;
   background: #730155;
-
 }
-
 
 .dropdown-menu {
   position: absolute;
@@ -62,6 +70,7 @@ nav ul li a:hover {
   border-radius: 10px;
   margin-top: 12px;
   display: none;
+  z-index: 1000;
 }
 .dropdown-menu::after {
   content: '';
