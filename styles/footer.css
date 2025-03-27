@@ -63,10 +63,25 @@ div .redes-sociais {
 .ajuda:hover  {
   box-shadow: 1px 2px 2px black;
   right: 28px;
-    bottom: 28px;
-
+  bottom: 28px;
+  
 }
 
+@media (max-width: 768px) {
+  .ajuda {
+      display: flex;
+      font-size: 0.6rem;
+      right: 20px;
+      bottom: 20px;
+      gap: 6px;
+    }
+    
+    .ajuda:hover {
+          box-shadow: 1px 2px 2px black;
+          right: 18px;
+          bottom: 18px;     
+        }
+}
 @media (max-width: 760px) {
   footer ul {
     display: flex;
