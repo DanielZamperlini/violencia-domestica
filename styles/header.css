@@ -60,6 +60,7 @@ nav ul li a:hover {
   background-color: #eddae7;
   padding: 6px 12px;
   border-radius: 10px;
+  margin-top: 12px;
   display: none;
 }
 .dropdown-menu::after {
@@ -83,7 +84,8 @@ nav ul li a:hover {
 .dropdown-menu a:hover {
   color: #80005d;
 }
-.dropdown:hover .dropdown-menu,.dropdown:focus .dropdown-menu {
+.dropdown-menu-open {
+  transition: ease-in-out 3s;
   display: block;
 }
 .menu-burguer {
