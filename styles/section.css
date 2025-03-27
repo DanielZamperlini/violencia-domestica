@@ -144,3 +144,31 @@ h3 {
     height: 180px;
   }
 }
+
+/* section serviços */
+
+.paragrafo {
+  text-align: center;
+  margin: 30px;
+  font-size: 0.9rem;
+  max-width: 100ch;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+h4 {
+  font-size: 1rem;
+  margin: 20px;
+}
+.servicos-oferecidos ul li, .servicos-oferecidos p {
+  font-size: 0.7rem;
+  list-style: disc;
+  margin-left: 50px;
+}
+.servicos-oferecidos {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  margin: 10px;
+  background: #80005d25;
+}
