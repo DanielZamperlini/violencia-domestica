@@ -12,8 +12,15 @@ header nav {
 }
 nav ul li a {
   color: black;
-  border-bottom: 1px solid #80005d;
+  padding: 4px;
 }
+@media (max-width: 768px) {
+nav ul li {
+  margin: 18px;
+  padding: 12px;
+}
+}
+
 nav ul li a:hover {
   color: #80005d;
 }
@@ -76,7 +83,7 @@ nav ul li a:hover {
 .dropdown-menu a:hover {
   color: #80005d;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,.dropdown:focus .dropdown-menu {
   display: block;
 }
 .menu-burguer {
