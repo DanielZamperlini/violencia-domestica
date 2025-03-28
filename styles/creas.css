@@ -1,0 +1,36 @@
+.section-creas p {
+  text-align: start;
+  font-size: 0.8rem;
+}
+.section-creas h4 {
+  text-align: center;
+}
+.ligue img {
+  max-width: 120px;
+  height: 80px;
+}
+.ligue {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+.ligue::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: -20px;
+  background: rgb(106, 106, 106);
+}
+.ligue p {
+  font-size: 0.7rem;
+  text-align: start;
+  max-width: 60ch;
+}
+.ligue h6 {
+  text-align: start;
+  margin-left: 30px;
+}
