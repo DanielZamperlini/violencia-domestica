@@ -1,0 +1,161 @@
+.bg-lei {
+  background: url(/imgs/backgrounds/backlei.png);
+  max-width: 100%;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: start;
+  justify-items: center;
+}
+.bg-lei h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif,serif;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 2px black;
+  margin: 60px;
+}
+.bg-lei .b-denuncie {
+  max-width: 100%;
+  margin: 2px;
+  font-size: 0.8rem;
+  background: white;
+  color: black;
+  margin-bottom: 30px;
+} 
+.span-inicial {
+  color: blueviolet;
+  font-size: 2rem;
+}
+.loas .paragrafo {
+  text-align: start;
+}
+.loas ul {
+  max-width: 80ch;
+  display: grid;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+.loas ul li {
+  list-style: disc;
+}
+.fatos-lei {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.fatos-lei div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fatos-lei .paragrafo {
+  text-align: start;
+}
+.fatos-lei img {
+  width: 60px;
+  height: 60px;
+}
+.fatos-lei .fatos {
+  max-width: 70px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .fatos-lei div {
+      display: grid;
+      justify-content: space-between;
+    }
+    .fatos-lei .fatos {
+      max-width: 100%;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+    .fatos-lei {
+      margin-top: 20px;
+    }
+    
+}
+
+/* sessao */
+
+.card-lei {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 60%;
+  box-shadow: 0 0 6px;
+  padding: 50px;
+  gap: 30px;
+  border-radius: 6px;
+}
+.card-lei img {
+  margin: 0 auto;
+}
+.card-lei .paragrafo {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+.card-lei {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 90%;
+    box-shadow: 0 0 6px;
+    padding: 20px;
+    gap: 10px;
+  }
+}
+.lista-medidas {
+  margin: 0 auto;
+}
+.lista-medidas li {
+  font-size: 0.8rem;
+  padding: 10px;
+  margin-left: 20px;
+  text-align: start;
+}
+.lista-medidas li span {
+  color: blueviolet;
+}
+.fatos-lei a {
+  margin: 0 auto;
+}
+
+  .referencia .paragrafo {
+      text-align: start;
+      font-size: 0.75rem;
+      padding: 5px;
+      word-wrap: break-word;
+      /* Alternativa: overflow-wrap: break-word; */
+      white-space: normal;
+      /* Garante que o texto quebre linhas */
+      overflow: hidden;
+      /* Evita estouro do contêiner */
+      text-overflow: ellipsis;
+      /* Opcional: adiciona "..." para texto longo */
+      max-width: 90%;
+      /* Limita a largura máxima */
+      box-sizing: border-box;
+      /* Inclui padding na largura total */
+    }
+
+.referencia {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .referencia .paragrafo {
+    max-width: 70%;
+    text-align: start;
+  }
+}
