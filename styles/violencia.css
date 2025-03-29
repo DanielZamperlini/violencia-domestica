@@ -1,0 +1,149 @@
+.bg-violencia {
+  background: url(/imgs/backgrounds/vio-domestica.png);
+  max-width: 100%;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: start;
+  justify-items: center;
+  padding: 40px;
+}
+
+.bg-violencia h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif, serif;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 2px black;
+  margin: 30px;
+}
+.bg-violencia .paragrafo {
+  color: white;
+  padding: 30px;
+}
+/* Quem pode ser vítima */
+.bg-vitimas {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.184)), url(/imgs/backgrounds/mulheres.jpg);
+  background-size: cover;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bg-vitimas h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 2px black;
+}
+.bg-vitimas .paragrafo {
+  color: #fff;
+}
+
+.vitimas-list {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  list-style-type: none;
+}
+
+.vitimas-list li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: rgba(108, 108, 108, 0.684);
+  border-left: 3px solid #5c0043;
+  color: #fff;
+}
+
+/* Sinais de Alerta */
+.bg-sinais {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.bg-sinais h2 {
+  text-align: center;
+  color: #80005d;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.sinais-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sinal-item {
+  text-align: center;
+}
+
+.sinal-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.sinal-item p {
+  color: #222;
+  font-weight: 500;
+}
+
+/* Como buscar ajuda */
+.bg-ajuda {
+  background-color: #f0f4f8;
+  padding: 60px 20px;
+}
+
+.bg-ajuda h2 {
+  text-align: center;
+  color: #80005d;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.ajuda-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ajuda-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #80005d;
+}
+
+.ajuda-card h3 {
+  color: #80005d;
+  margin-bottom: 15px;
+}
+
+.ajuda-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  .tipos-container,
+  .sinais-container,
+  .ajuda-container {
+    grid-template-columns: 1fr;
+  }
+
+  .bg-violencia,
+  .bg-vitimas,
+  .bg-sinais,
+  .bg-ajuda {
+    padding: 40px 15px;
+  }
+}

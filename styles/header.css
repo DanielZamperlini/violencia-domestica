@@ -39,6 +39,7 @@ nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  z-index: 1000;
 }
 .creas {
   max-width: 10em;
@@ -99,6 +100,7 @@ nav ul li a:hover {
 }
 .menu-burguer {
   display: none;
+  z-index: 1001;
 }
 /* From Uiverse.io by vinodjangid07 */
 #checkbox {
