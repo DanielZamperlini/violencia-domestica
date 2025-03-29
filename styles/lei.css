@@ -36,6 +36,9 @@
   margin: 0 auto;
   padding: 0px 30px;
 }
+.loas h5 {
+  margin-top: 30px;
+}
 .loas ul li {
   list-style: disc;
 }

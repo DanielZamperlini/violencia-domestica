@@ -1,0 +1,208 @@
+/* Ciclo da Violência */
+.bg-ciclo {
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(/imgs/backgrounds/ciclo-bg.jpg);
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bg-ciclo h2 {
+  color: #80005d;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.paragrafo-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.ciclo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.fase-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.fase-card:hover {
+  transform: translateY(-5px);
+}
+
+.fase-number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #80005d;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.fase-card h3 {
+  color: #80005d;
+  margin-bottom: 15px;
+  padding-right: 30px;
+  text-align: left;
+}
+
+.fase-card ul {
+  text-align: left;
+  padding-left: 20px;
+  color: #555;
+  z-index: -1;
+}
+
+.fase-card li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Cores específicas para cada fase */
+.fase-1 {
+  border-top: 4px solid #FFA000; /* Âmbar */
+}
+
+.fase-2 {
+  border-top: 4px solid #80005d; /* Vermelho */
+}
+
+.fase-3 {
+  border-top: 4px solid #388E3C; /* Verde */
+}
+
+.fase-4 {
+  border-top: 4px solid #1976D2; /* Azul */
+}
+
+.ciclo-alerta {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFF8E1;
+  border-left: 4px solid #FFA000;
+  text-align: left;
+}
+
+.ciclo-alerta p {
+  color: #5D4037;
+  margin: 0;
+}
+.quebrar-ciclo {
+  margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .ciclo-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .bg-ciclo {
+    padding: 40px 15px;
+  }
+}
+/* Quebrar o Ciclo */
+.bg-quebrar-ciclo {
+  background-color: #f9f0ff;
+  padding: 60px 20px;
+  border-top: 3px solid #80005d;
+  border-bottom: 3px solid #80005d;
+}
+
+.quebrar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quebrar-texto h2 {
+  color: #80005d;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.destaque {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4a148c;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.quebrar-content {
+  background: white;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.quebrar-content h3 {
+  color: #80005d;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.quebrar-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.float-img {
+  width: 300px;
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  shape-outside: margin-box;
+}
+
+.alert-box {
+  background-color: #fff8f8;
+  border-left: 4px solid #d32f2f;
+  padding: 15px;
+  margin-top: 20px;
+  color: #5d4037;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bg-quebrar-ciclo {
+    padding: 40px 15px;
+  }
+
+  .float-img {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .quebrar-content {
+    padding: 20px;
+  }
+}
