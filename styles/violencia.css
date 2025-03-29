@@ -20,10 +20,12 @@
 .bg-violencia .paragrafo {
   color: white;
   padding: 30px;
+  max-width: 70ch;
 }
 /* Quem pode ser vítima */
 .bg-vitimas {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.184)), url(/imgs/backgrounds/mulheres.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.184)),
+    url(/imgs/backgrounds/mulheres.jpg);
   background-size: cover;
   padding: 60px 20px;
   color: white;
@@ -133,7 +135,6 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-
   .tipos-container,
   .sinais-container,
   .ajuda-container {
