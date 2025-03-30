@@ -68,6 +68,7 @@
 
 textarea.form-input {
   height: 100px;
+  resize: none;
 }
 
 .form-button {
