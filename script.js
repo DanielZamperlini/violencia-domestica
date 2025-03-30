@@ -49,3 +49,5 @@ const interval = setInterval(autoScroll, 20);
 // Pausa o auto-scroll enquanto o usuário interage
 carrosel.addEventListener('touchstart', () => clearInterval(interval));
 carrosel.addEventListener('mousedown', () => clearInterval(interval));
+
+// galeria
