@@ -99,29 +99,51 @@ h3 {
   grid-template-columns: 1fr;
   max-width: 1600px;
 }
+
 .section-galeria .b-denuncie {
   margin: 0 auto;
 }
+
+.carrosel {
+  display: flex;
+  gap: 6px;
+  overflow: hidden;
+  /* Esconde o conteúdo fora da área visível */
+  margin: 20px;
+  position: relative;
+  width: 100%;
+}
+
 .img-carrosel {
-  display: block;
+  flex-shrink: 0;
+  /* Garante que as imagens não encolham */
   width: 300px;
   height: 380px;
   object-fit: cover;
 }
-.carrosel {
+
+.carrosel-inner {
   display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  margin: 20px;
+  animation: slide 20s linear infinite;
+  /* Controla o movimento das imagens */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @media (max-width: 768px) {
-.img-carrosel {
+  .img-carrosel {
     width: 100px;
     height: 140px;
   }
 }
-
 /* section serviços */
 
 .paragrafo {

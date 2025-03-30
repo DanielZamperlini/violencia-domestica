@@ -11,24 +11,54 @@ h5 {
 h6 {
   font-size: 1.5rem;
 }
-.fotos-galeria {
+.section-galeria {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1600px;
+}
+
+.section-galeria .b-denuncie {
+  margin: 0 auto;
+}
+
+.carrosel {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 60px 20px 20px 20px;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  /* Permite rolagem horizontal */
+  scroll-behavior: smooth;
+  /* Suaviza a rolagem */
+  margin: 20px;
+  position: relative;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  /* Melhora experiência em dispositivos móveis */
 }
 
-.fotos-galeria img {
-  width: 100px;
-  height: 140px;
+.img-carrosel {
+  flex-shrink: 0;
+  width: 300px;
+  height: 380px;
   object-fit: cover;
+  margin: 2px;
 }
 
-@media (min-width: 768px) {
-  .fotos-galeria img {
-    width: 200px;
-    height: 280px;
+.carrosel-inner {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .img-carrosel {
+    width: 100px;
+    height: 140px;
   }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Impede barra de rolagem horizontal */
 }
