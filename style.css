@@ -33,3 +33,18 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+body {
+  background-color: white;
+  /* Define o fundo como branco */
+  color: black;
+  /* Define o texto como preto */
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+    /* Mantém o fundo branco mesmo no modo escuro */
+    color: black;
+    /* Mantém o texto preto */
+  }
+}
