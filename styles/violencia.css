@@ -12,22 +12,22 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif, serif;
   font-weight: 800;
-  color: white;
-  text-shadow: 0 2px 2px black;
+  color: var(--color2);
+  text-shadow: 0 2px 2px var(--shadow1);
   margin: 30px;
 }
 .bg-violencia .paragrafo {
-  color: white;
+  color: var(--color2);
   padding: 30px;
   max-width: 70ch;
 }
 /* Quem pode ser vítima */
 .bg-vitimas {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.184)),
+  background: var(--bgcolor5),
     url(/imgs/backgrounds/mulheres.jpg);
   background-size: cover;
   padding: 60px 20px;
-  color: white;
+  color: var(--color2);
   text-align: center;
   margin-top: 20px;
 }
@@ -35,11 +35,11 @@
 .bg-vitimas h2 {
   margin-bottom: 30px;
   font-size: 2rem;
-  color: white;
+  color: var(--color2);
   text-shadow: 0 2px 2px black;
 }
 .bg-vitimas .paragrafo {
-  color: #fff;
+  color: var(--color2);
 }
 
 .vitimas-list {
@@ -52,20 +52,20 @@
 .vitimas-list li {
   padding: 10px;
   margin: 5px 0;
-  background-color: rgba(108, 108, 108, 0.684);
-  border-left: 3px solid #5c0043;
-  color: #fff;
+  background-color: var(--bgcolor6);
+  border-left: 3px solid var(--color4);
+  color: var(--color2);
 }
 
 /* Sinais de Alerta */
 .bg-sinais {
   padding: 60px 20px;
-  background-color: #fff;
+  background-color: var(--bgcolor2);
 }
 
 .bg-sinais h2 {
   text-align: center;
-  color: #80005d;
+  color: var(--color4);
   margin-bottom: 40px;
   font-size: 2rem;
 }
@@ -89,19 +89,19 @@
 }
 
 .sinal-item p {
-  color: #222;
+  color: var(--color5);
   font-weight: 500;
 }
 
 /* Como buscar ajuda */
 .bg-ajuda {
-  background-color: #f0f4f8;
+  background-color: var(--bgcolor7);
   padding: 60px 20px;
 }
 
 .bg-ajuda h2 {
   text-align: center;
-  color: #80005d;
+  color: var(--color4);
   margin-bottom: 40px;
   font-size: 2rem;
 }
@@ -115,20 +115,20 @@
 }
 
 .ajuda-card {
-  background: white;
+  background: var(--bgcolor2);
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #80005d;
+  box-shadow: 0 4px 8px var(--shadow3);
+  border-top: 4px solid var(--color4);
 }
 
 .ajuda-card h3 {
-  color: #80005d;
+  color: var(--color4);
   margin-bottom: 15px;
 }
 
 .ajuda-card p {
-  color: #555;
+  color: var(--color6);
   line-height: 1.6;
 }
 

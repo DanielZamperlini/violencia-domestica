@@ -1,0 +1,40 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  list-style-type: none;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: white;
+  /* Define o fundo como branco */
+  color: black;
+  /* Define o texto como preto */
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+    /* Mantém o fundo branco mesmo no modo escuro */
+    color: black;
+    /* Mantém o texto preto */
+  }
+}

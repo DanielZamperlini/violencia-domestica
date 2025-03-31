@@ -1,31 +1,31 @@
 main {
-  background: #0b070d;
+  background: var(--bgcolor8);
   background: url(/imgs/backgrounds/backheader.png) no-repeat;
   background-size: cover;
   padding: 2px;
 }
 .background-glass {
-  background: #0b070d99;
+  background: var(--bgcolor9);
   max-width: 400px;
   margin: 0 auto;
   border-radius: 8px;
 }
 .h1 {
-  color: white;
+  color: var(--color2);
   font-size: 1.2rem;
   text-align: center;
   padding: 10px;
   margin-top: 5rem;
-  text-shadow: 0 4px 4px black;
+  text-shadow: 0 4px 4px var(--color1);
 }
 .texto {
-  color: white;
+  color: var(--color2);
   padding: 20px;
   line-height: 1;
   font-size: 0.75rem;
   margin-bottom: 6rem;
   text-align: center;
-  text-shadow: 0 2px 2px black;
+  text-shadow: 0 2px 2px var(--color1);
 }
 @media (min-width: 768px) {
   main {

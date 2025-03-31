@@ -1,50 +1,13 @@
+@import url(styles/colors.css);
+@import url(styles/reset.css);
 @import url(styles/header.css);
 @import url(styles/footer.css);
 @import url(styles/texto.css);
 @import url(styles/section.css);
 @import url(styles/galeria.css);
-@import url(styles/slider.css);
 @import url(styles/creas.css);
 @import url(styles/contato.css);
 @import url(styles/lei.css);
 @import url(styles/violencia.css);
 @import url(styles/ciclo.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  color: black;
-  font-family: 'Roboto Mono', monospace;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-}
-img {
-  max-width: 100%;
-}
-body {
-  list-style-type: none;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-body {
-  background-color: white;
-  /* Define o fundo como branco */
-  color: black;
-  /* Define o texto como preto */
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: white;
-    /* Mantém o fundo branco mesmo no modo escuro */
-    color: black;
-    /* Mantém o texto preto */
-  }
-}

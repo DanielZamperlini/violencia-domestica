@@ -1,0 +1,24 @@
+:root {
+  --color1: #000;
+  --color2: #fff;
+  --color3: #462B79;
+  --color4: #80005d;
+  --color5: #222;
+  --color6: #555;
+  --color5: #222;
+  --bgcolor1: #000;
+  --bgcolor2: #fff;
+  --bgcolor3: #462B7925;
+  --bgcolor4: #80005d25;
+  --bgcolor5: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.184));
+  --bgcolor6: rgba(108, 108, 108, 0.684); 
+  --bgcolor7:#f0f4f8;
+  --bgcolor8: #0b070d;
+  --bgcolor9: #0b070d99;
+  --shadow1: #000;
+  --shadow2: #fff;
+  --shadow3: rgba(0, 0, 0, 0.1);
+  --shadow4: rgba(44, 44, 44, 0.15);
+  --shadow5: rgba(44, 44, 44, 0.15);
+}
