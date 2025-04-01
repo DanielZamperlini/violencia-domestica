@@ -23,31 +23,3 @@ document.addEventListener('click', function (event) {
 });
 
 // galeria
-
-const carrosel = document.querySelector('.carrosel');
-const carroselInner = document.querySelector('.carrosel-inner');
-const imgs = document.querySelectorAll('.img-carrosel');
-
-// Clona as imagens para criar o efeito de loop infinito
-imgs.forEach((img) => {
-  const clone = img.cloneNode(true);
-  carroselInner.appendChild(clone);
-});
-
-// Rolagem automática
-let scrollAmount = 0;
-function autoScroll() {
-  carrosel.scrollLeft += 1; // Move o carrossel lentamente
-  if (carrosel.scrollLeft >= carrosel.scrollWidth - carrosel.offsetWidth) {
-    carrosel.scrollLeft = 0; // Reinicia quando chegar ao final
-  }
-}
-
-// Inicia o auto-scroll
-const interval = setInterval(autoScroll, 20);
-
-// Pausa o auto-scroll enquanto o usuário interage
-carrosel.addEventListener('touchstart', () => clearInterval(interval));
-carrosel.addEventListener('mousedown', () => clearInterval(interval));
-
-// galeria
