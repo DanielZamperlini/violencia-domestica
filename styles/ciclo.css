@@ -1,6 +1,6 @@
 /* Ciclo da Violência */
 .bg-ciclo {
-  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(/imgs/backgrounds/ciclo-bg.jpg);
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url(/imgs/backgrounds/hero-bg.png);
   background-size: cover;
   padding: 60px 20px;
   text-align: center;

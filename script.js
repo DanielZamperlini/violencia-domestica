@@ -21,5 +21,3 @@ document.addEventListener('click', function (event) {
     }
   });
 });
-
-// galeria
