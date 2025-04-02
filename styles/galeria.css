@@ -72,6 +72,9 @@ body {
     object-fit: cover;
     margin: 2px;
 }
+.galeria h6 {
+  margin-bottom: 30px
+};
 @media (max-width: 768px) {
   .img-carrosel {
     width: 100px;
