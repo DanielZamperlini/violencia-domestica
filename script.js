@@ -1,8 +1,10 @@
 const botao = document.querySelector('.toggle');
-botao.addEventListener('click', function () {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('open');
-});
+if (botao) {
+  botao.addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('open');
+  });
+}
 
 const dropdownOpen = document.querySelectorAll('.dropdown');
 
@@ -22,92 +24,126 @@ document.addEventListener('click', function (event) {
   });
 });
 
-// slide de fotos
+// Código da galeria
+document.addEventListener('DOMContentLoaded', function () {
+  // Primeiro, verificamos se os elementos existem
+  const track = document.querySelector('.galeria-track');
+  if (!track) {
+    console.log('Elemento .galeria-track não encontrado');
+    return; // Sai da função se não encontrar o track
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const carousel = document.querySelector('.carousel-container');
-  const slides = document.querySelectorAll('.carousel-slide');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-  const dotsContainer = document.querySelector('.carousel-dots');
+  const prevButton = document.querySelector('.prev-btn');
+  const nextButton = document.querySelector('.next-btn');
+  const images = track.querySelectorAll('.img-galeria');
+
+  if (!prevButton || !nextButton || images.length === 0) {
+    console.log('Elementos necessários não encontrados');
+    return; // Sai da função se não encontrar algum elemento necessário
+  }
 
   let currentIndex = 0;
-  let isTransitioning = false;
-  let autoplayInterval;
+  let startX = 0;
+  let currentTranslate = 0;
+  let isDragging = false;
+  const imagesPerView = Math.floor(
+    track.clientWidth / (images[0].offsetWidth + 20),
+  );
 
-  // Crie pontos
-  slides.forEach((_, index) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(index));
-    dotsContainer.appendChild(dot);
-  });
+  // Atualiza a posição do track
+  function updateTrackPosition(offset = 0) {
+    const imageWidth = images[0].offsetWidth + 20; // largura + margem
+    currentTranslate = -currentIndex * imageWidth + offset;
+    track.style.transform = `translateX(${currentTranslate}px)`;
 
-  const dots = document.querySelectorAll('.dot');
-
-  function updateDots() {
-    dots.forEach((dot, index) => {
-      dot.classList.toggle('active', index === currentIndex);
-    });
+    // Atualiza estado dos botões
+    prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    nextButton.style.opacity =
+      currentIndex >= images.length - imagesPerView ? '0.5' : '1';
   }
 
-  function goToSlide(index) {
-    if (!isTransitioning && index !== currentIndex) {
-      isTransitioning = true;
-      currentIndex = index;
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-      updateDots();
-      resetAutoplay();
+  // Funções para touch e mouse events
+  function handleTouchStart(e) {
+    startX = e.type === 'mousedown' ? e.pageX : e.touches[0].pageX;
+    isDragging = true;
+    track.style.transition = 'none'; // Remove transição durante o arrasto
+  }
+
+  function handleTouchMove(e) {
+    if (!isDragging) return;
+
+    e.preventDefault();
+    const currentX = e.type === 'mousemove' ? e.pageX : e.touches[0].pageX;
+    const diff = currentX - startX;
+
+    // Limita o arrasto
+    const imageWidth = images[0].offsetWidth + 20;
+    const maxDiff = imageWidth;
+    const limitedDiff = Math.max(Math.min(diff, maxDiff), -maxDiff);
+
+    updateTrackPosition(limitedDiff);
+  }
+
+  function handleTouchEnd(e) {
+    if (!isDragging) return;
+
+    isDragging = false;
+    track.style.transition = 'transform 0.5s ease'; // Restaura a transição
+
+    const currentX = e.type === 'mouseup' ? e.pageX : e.changedTouches[0].pageX;
+    const diff = currentX - startX;
+
+    // Determina se deve mudar de slide baseado na distância do swipe
+    const threshold = 100; // Distância mínima para mudar de slide
+
+    if (diff > threshold && currentIndex > 0) {
+      currentIndex--;
+    } else if (
+      diff < -threshold &&
+      currentIndex < images.length - imagesPerView
+    ) {
+      currentIndex++;
     }
+
+    updateTrackPosition();
   }
 
-  function nextSlide() {
-    goToSlide((currentIndex + 1) % slides.length);
-  }
-
-  function prevSlide() {
-    goToSlide((currentIndex - 1 + slides.length) % slides.length);
-  }
-
-  function resetAutoplay() {
-    clearInterval(autoplayInterval);
-    autoplayInterval = setInterval(nextSlide, 3500);
-  }
-
-  // Eventos
-  prevButton.addEventListener('click', prevSlide);
-  nextButton.addEventListener('click', nextSlide);
-
-  carousel.addEventListener('transitionend', () => {
-    isTransitioning = false;
-  });
-
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  carousel.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  carousel.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
+  // Botão próximo
+  nextButton.addEventListener('click', () => {
+    if (currentIndex < images.length - imagesPerView) {
+      currentIndex++;
+      updateTrackPosition();
     }
-  }
+  });
 
-  // reprodução automática
-  resetAutoplay();
+  // Botão anterior
+  prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateTrackPosition();
+    }
+  });
+
+  // Adiciona eventos de touch
+  track.addEventListener('touchstart', handleTouchStart);
+  track.addEventListener('touchmove', handleTouchMove);
+  track.addEventListener('touchend', handleTouchEnd);
+
+  // Adiciona eventos de mouse
+  track.addEventListener('mousedown', handleTouchStart);
+  track.addEventListener('mousemove', handleTouchMove);
+  track.addEventListener('mouseup', handleTouchEnd);
+  track.addEventListener('mouseleave', handleTouchEnd);
+
+  // Previne o comportamento padrão de arrastar imagem
+  track.addEventListener('dragstart', (e) => e.preventDefault());
+
+  // Inicializa a posição
+  updateTrackPosition();
+
+  // Atualiza quando a janela é redimensionada
+  window.addEventListener('resize', () => {
+    currentIndex = 0;
+    updateTrackPosition();
+  });
 });
