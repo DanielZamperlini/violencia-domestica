@@ -163,3 +163,43 @@ body {
     height: 300px;
   }
 }
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  padding: 30px;
+  cursor: pointer;
+  font-size: 30px;
+  display: none; /* Escondido por padrão */
+  z-index: 9999;
+}
+
+.prev-button {
+  left: 30px;
+}
+.next-button {
+  right: 30px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .prev-button,
+  .next-button {
+    position: absolute;
+    padding: 15px;
+    font-size: 15px;
+  }
+  .prev-button {
+    left: 10px;
+  }
+  .next-button {
+    right: 10px;
+  }
+}
